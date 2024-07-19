@@ -42,7 +42,7 @@ layers:
   - lower
   - ENTER
   - SPACE
-  - '&graveand2layer'
+  - '&escand2layer'
   lower:
   - {t: ▽, type: trans}
   - '1'
