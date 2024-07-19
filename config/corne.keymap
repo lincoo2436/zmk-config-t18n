@@ -22,11 +22,13 @@
     };
 
     behaviors {
-        graveand2layer: graveand2layer {
+        escand2layer: escand2layer {
             compatible = "zmk,behavior-tap-dance";
-            label = "GRAVEAND2LAYER";
+            label = "ESCAND2LAYER";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE>, <&tog 2>;
+            bindings = <&kp ESC>, <&tog 2>;
+
+            tapping-term-ms = <50>;
         };
     };
 
@@ -42,10 +44,10 @@
 
             label = "base";
             bindings = <
-&kp TAB         &kp Q                   &kp W  &kp E      &kp R     &kp T    &kp Y      &kp U      &kp I            &kp O      &kp P       &kp BSPC
-&kp CAPS        &kp A                   &kp S  &kp D      &kp F     &kp G    &kp H      &kp J      &kp K            &kp L      &kp SEMI    &kp SQT
-&kp LEFT_SHIFT  &mt LEFT_ALT BACKSLASH  &kp Z  &kp X      &kp C     &kp V    &kp B      &kp N      &kp M            &kp COMMA  &kp PERIOD  &lt 3 SLASH
-                                               &kp LCTRL  &kp LGUI  &mo 1    &kp ENTER  &kp SPACE  &graveand2layer
+&kp TAB         &kp Q                   &kp W  &kp E      &kp R     &kp T    &kp Y      &kp U      &kp I          &kp O      &kp P       &kp BSPC
+&kp CAPS        &kp A                   &kp S  &kp D      &kp F     &kp G    &kp H      &kp J      &kp K          &kp L      &kp SEMI    &kp SQT
+&kp LEFT_SHIFT  &mt LEFT_ALT BACKSLASH  &kp Z  &kp X      &kp C     &kp V    &kp B      &kp N      &kp M          &kp COMMA  &kp PERIOD  &lt 3 SLASH
+                                               &kp LCTRL  &kp LGUI  &mo 1    &kp ENTER  &kp SPACE  &escand2layer
             >;
         };
 
