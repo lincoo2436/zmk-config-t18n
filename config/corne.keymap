@@ -21,6 +21,15 @@
         };
     };
 
+    behaviors {
+        graveand2layer: graveand2layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GRAVEAND2LAYER";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&tog 2>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -30,12 +39,13 @@
             // | SHFT |  A  |  S  |  D  |  F  |  G  |       |  H  |  J   |  K  |  L  |  ;  |    '      |
             // | CTRL |  Z  |  X  |  C  |  V  |  B  |       |  N  |  M   |  ,  |  .  |  /  | SHFT(RET) |
             //                    | ALT | WIN | LWR |       | RSE | SPC  | RTN |
+
             label = "base";
             bindings = <
-&kp TAB         &kp Q                   &kp W  &kp E      &kp R     &kp T    &kp Y      &kp U      &kp I   &kp O      &kp P       &kp BSPC
-&kp CAPS        &kp A                   &kp S  &kp D      &kp F     &kp G    &kp H      &kp J      &kp K   &kp L      &kp SEMI    &kp SQT
-&kp LEFT_SHIFT  &mt LEFT_ALT BACKSLASH  &kp Z  &kp X      &kp C     &kp V    &kp B      &kp N      &kp M   &kp COMMA  &kp PERIOD  &lt 3 SLASH
-                                               &kp LCTRL  &kp LGUI  &mo 1    &kp ENTER  &kp SPACE  &tog 2
+&kp TAB         &kp Q                   &kp W  &kp E      &kp R     &kp T    &kp Y      &kp U      &kp I            &kp O      &kp P       &kp BSPC
+&kp CAPS        &kp A                   &kp S  &kp D      &kp F     &kp G    &kp H      &kp J      &kp K            &kp L      &kp SEMI    &kp SQT
+&kp LEFT_SHIFT  &mt LEFT_ALT BACKSLASH  &kp Z  &kp X      &kp C     &kp V    &kp B      &kp N      &kp M            &kp COMMA  &kp PERIOD  &lt 3 SLASH
+                                               &kp LCTRL  &kp LGUI  &mo 1    &kp ENTER  &kp SPACE  &graveand2layer
             >;
         };
 
@@ -45,6 +55,7 @@
             // |    |  _  |  +  |  {  |  }  | "|" |          | LFT | PGUP|  UP |PGDN|  `  |     ~     |
             // |    | ESC | GUI | ALT | CAPS|  "  |          | HOME| LFT | DWN | RGT| PRSC| SHFT(RET) |
             //                        |     |     |           | ADJ | SPC |  RET  |
+
             label = "lower";
             bindings = <
 &trans  &kp N1     &kp NUMBER_2  &kp N3           &kp N4         &kp N5     &kp NUMBER_6    &kp N7        &kp N8              &kp N9     &kp N0             &kp DEL
@@ -60,6 +71,7 @@
             // |    |  -  |  =  |  [  |  ]  |  \  |   | F1  | F2  | F3  | F4  | F5  | F6  |
             // |    | ESC | GUI | ALT | CAPS|  "  |   | F7  | F8  | F9  | F10 | F11 | F12 |
             //                       |     | ADJ | BKSP |    |     |
+
             label = "raise";
             bindings = <
 &kp ESC       &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR      &kp PERCENT     &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL
@@ -75,11 +87,12 @@
             // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |  USB  | BLE |     |     |     |        |
             // |          |          |          |          |    | K_SLEEP |   | RESET |     |     |     |     |        |
             //                                              |     |     |     |     |     |
+
             label = "adjust";
             bindings = <
 &rgb_ug RGB_BRI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &none             &rgb_ug RGB_TOG      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4  &bt BT_CLR
 &rgb_ug RGB_BRD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &ext_power EP_ON  &ext_power EP_OFF    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 4  &none         &none
-&none            &none            &kp LG(GRAVE)           &kp LA(GRAVE)           &none             &kp K_SLEEP          &sys_reset     &out OUT_USB   &out OUT_BLE   &none          &none         &none
+&none            &none            &kp LG(GRAVE)    &kp LA(GRAVE)    &none             &kp K_SLEEP          &sys_reset     &out OUT_USB   &out OUT_BLE   &none          &none         &none
                                                    &trans           &trans            &trans               &tog 4         &tog 5         &tog 6
             >;
         };
@@ -87,20 +100,20 @@
         number {
             label = "number";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7        &kp NUMBER_8  &kp N9  &kp N0     &kp BACKSPACE
-&trans  &kp LEFT   &kp UP_ARROW   &kp DOWN      &kp RIGHT   &trans    &trans  &kp NUMBER_4  &kp N5        &kp N6  &kp PLUS   &kp STAR
-&trans  &trans  &trans  &trans  &trans  &trans    &tog 4  &kp NUMBER_1  &kp N2        &kp N3  &kp MINUS  &kp SLASH
-                        &trans  &trans  &trans    &trans  &trans        &trans
+&trans  &trans    &trans        &trans    &trans     &trans    &trans  &kp N7        &kp NUMBER_8  &kp N9  &kp N0     &kp BACKSPACE
+&trans  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &trans    &trans  &kp NUMBER_4  &kp N5        &kp N6  &kp PLUS   &kp STAR
+&trans  &trans    &trans        &trans    &trans     &trans    &tog 4  &kp NUMBER_1  &kp N2        &kp N3  &kp MINUS  &kp SLASH
+                                &trans    &trans     &trans    &trans  &trans        &trans
             >;
         };
 
         symbol {
             label = "symbol";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &kp LEFT   &kp UP_ARROW   &kp DOWN      &kp RIGHT   &trans    &trans  &kp DOLLAR     &kp PERCENT   &kp CARET             &trans                 &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &tog 5  &kp EXCL       &kp AT_SIGN   &kp HASH              &trans                 &trans
-                        &trans  &trans  &trans    &trans  &trans         &trans
+&trans  &trans    &trans        &trans    &trans     &trans    &trans  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &trans    &trans  &kp DOLLAR     &kp PERCENT   &kp CARET             &trans                 &trans
+&trans  &trans    &trans        &trans    &trans     &trans    &tog 5  &kp EXCL       &kp AT_SIGN   &kp HASH              &trans                 &trans
+                                &trans    &trans     &trans    &trans  &trans         &trans
             >;
         };
 
