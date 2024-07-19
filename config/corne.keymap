@@ -47,7 +47,7 @@
             //                        |     |     |           | ADJ | SPC |  RET  |
             label = "lower";
             bindings = <
-&trans  &kp N1     &kp NUMBER_2  &kp N3           &kp N4         &kp N5     &kp NUMBER_6    &kp N7        &kp N8              &kp N9     &kp N0             &kp BACKSPACE
+&trans  &kp N1     &kp NUMBER_2  &kp N3           &kp N4         &kp N5     &kp NUMBER_6    &kp N7        &kp N8              &kp N9     &kp N0             &kp DEL
 &trans  &kp MINUS  &kp INSERT    &kp LBRC         &kp HOME       &kp END    &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN            &kp RIGHT  &kp GRAVE          &kp RETURN
 &trans  &kp EQUAL  &kp LGUI      &kp RIGHT_BRACE  &kp BACKSPACE  &kp DEL    &kp MINUS       &kp EQUAL     &kp LS(UNDERSCORE)  &kp PLUS   &kp DOUBLE_QUOTES  &kp SQT
                                  &kp TILDE        &kp COLON      &trans     &kp ESCAPE      &kp HASH      &kp AT
@@ -88,7 +88,7 @@
             label = "number";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N7        &kp NUMBER_8  &kp N9  &kp N0     &kp BACKSPACE
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_4  &kp N5        &kp N6  &kp PLUS   &kp STAR
+&trans  &kp LEFT   &kp UP_ARROW   &kp DOWN      &kp RIGHT   &trans    &trans  &kp NUMBER_4  &kp N5        &kp N6  &kp PLUS   &kp STAR
 &trans  &trans  &trans  &trans  &trans  &trans    &tog 4  &kp NUMBER_1  &kp N2        &kp N3  &kp MINUS  &kp SLASH
                         &trans  &trans  &trans    &trans  &trans        &trans
             >;
@@ -98,7 +98,7 @@
             label = "symbol";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp DOLLAR     &kp PERCENT   &kp CARET             &trans                 &trans
+&trans  &kp LEFT   &kp UP_ARROW   &kp DOWN      &kp RIGHT   &trans    &trans  &kp DOLLAR     &kp PERCENT   &kp CARET             &trans                 &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &tog 5  &kp EXCL       &kp AT_SIGN   &kp HASH              &trans                 &trans
                         &trans  &trans  &trans    &trans  &trans         &trans
             >;
