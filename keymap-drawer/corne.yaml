@@ -40,7 +40,7 @@ layers:
   - LCTRL
   - LGUI
   - lower
-  - ENTER
+  - {t: RET, h: raise}
   - SPACE
   - '&escand2layer'
   lower:
@@ -126,7 +126,7 @@ layers:
   - LCTRL
   - LEFT SHIFT
   - LEFT ALT
-  - ENTER
+  - {t: ENTER, type: held}
   - SPACE
   - {t: raise, h: toggle}
   adjust:
@@ -168,7 +168,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: Game, h: toggle}
   - {t: number, h: toggle}
   - {t: symbol, h: toggle}
   - {t: lock, h: toggle}
@@ -301,6 +301,49 @@ layers:
   - ''
   - ''
   - {t: lock, h: toggle}
+  Game:
+  - ESCAPE
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT WIN
+  - A
+  - S
+  - D
+  - F
+  - G
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LSHFT
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - {t: Game, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LCTRL
+  - LEFT ALT
+  - SPACE
+  - SPACE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [19, 20]
   k: ESCAPE
