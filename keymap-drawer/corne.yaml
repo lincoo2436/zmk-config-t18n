@@ -311,8 +311,8 @@ layers:
   - {t: ▽, type: trans}
   - '&mkp LCLK'
   - '&mkp RCLK'
-  - '&msc SCRL_DOWN'
-  - '&msc SCRL_UP'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT WIN
   - A
