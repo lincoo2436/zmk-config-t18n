@@ -104,11 +104,11 @@ layers:
   - '='
   - '['
   - ']'
-  - \
-  - LEFT
-  - UP ARROW
-  - DOWN
-  - RIGHT
+  - '&mclicklayer'
+  - '&msc MOVE_LEFT'
+  - '&msc MOVE_DOWN'
+  - '&msc MOVE_UP'
+  - '&msc MOVE_RIGHT'
   - CAPSLOCK
   - TAB
   - F1
@@ -311,8 +311,8 @@ layers:
   - {t: ▽, type: trans}
   - '&mkp LCLK'
   - '&mkp RCLK'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&msc SCRL_UP'
+  - '&msc SCRL_DOWN'
   - {t: ▽, type: trans}
   - LEFT WIN
   - A
