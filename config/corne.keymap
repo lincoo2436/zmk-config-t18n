@@ -85,7 +85,7 @@
             label = "raise";
             bindings = <
 &kp ESC       &kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR      &kp PERCENT     &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DEL
-&kp LEFT_WIN  &kp MINUS        &kp EQUAL    &kp LBKT   &kp RBKT       &mclicklayer         &msc MOVE_LEFT    &msc MOVE_DOWN  &msc MOVE_UP  &msc MOVE_RIGHT             &kp CAPSLOCK           &kp TAB
+&kp LEFT_WIN  &kp MINUS        &kp EQUAL    &kp LBKT   &kp RBKT       &mclicklayer         &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT             &kp CAPSLOCK           &kp TAB
 &kp F1        &kp F2           &kp F3       &kp F4     &kp F5          &kp F6          &kp F7     &kp F8         &kp F9        &kp F10               &kp F11                &kp F12
                                             &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_ALT    &kp ENTER  &kp SPACE      &tog 2
             >;
@@ -140,7 +140,7 @@
         Game {
             bindings = <
 &kp ESCAPE    &kp Q   &kp W  &kp E      &kp R         &kp T        &trans     &mkp LCLK  &mkp RCLK   &msc SCRL_UP &msc SCRL_DOWN   &trans
-&kp LEFT_WIN  &kp A   &kp S  &kp D      &kp F         &kp G        &msc MOVE_LEFT    &msc MOVE_DOWN  &msc MOVE_UP  &msc MOVE_RIGHT  &trans  &trans
+&kp LEFT_WIN  &kp A   &kp S  &kp D      &kp F         &kp G        &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
 &kp LSHFT     &trans  &kp Z  &kp X      &kp C         &kp V        &tog 7     &trans  &trans  &trans  &trans  &trans
                              &kp LCTRL  &kp LEFT_ALT  &kp SPACE    &kp SPACE  &trans  &trans
             >;
