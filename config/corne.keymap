@@ -132,7 +132,7 @@
 
         Game {
             bindings = <
-&kp ESCAPE    &kp Q   &kp W  &kp E      &kp R         &kp T        &trans     &mkp LCLK  &mkp RCLK  &msc SCRL_DOWN  &msc SCRL_UP  &trans
+&kp ESCAPE    &kp Q   &kp W  &kp E      &kp R         &kp T        &trans     &mkp LCLK  &mkp RCLK  &trans &trans  &trans
 &kp LEFT_WIN  &kp A   &kp S  &kp D      &kp F         &kp G        &msc MOVE_LEFT    &msc MOVE_DOWN  &msc MOVE_UP  &msc MOVE_RIGHT  &trans  &trans
 &kp LSHFT     &trans  &kp Z  &kp X      &kp C         &kp V        &tog 7     &trans  &trans  &trans  &trans  &trans
                              &kp LCTRL  &kp LEFT_ALT  &kp SPACE    &kp SPACE  &trans  &trans
