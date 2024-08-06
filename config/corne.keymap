@@ -10,6 +10,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/mouse.h>
+
 
 / {
     combos {
@@ -131,7 +133,7 @@
 
         Game {
             bindings = <
-&kp ESCAPE    &kp Q   &kp W  &kp E      &kp R         &kp T        &trans     &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE    &kp Q   &kp W  &kp E      &kp R         &kp T        &trans     &mkp LCLK  &trans  &trans  &trans  &trans
 &kp LEFT_WIN  &kp A   &kp S  &kp D      &kp F         &kp G        &trans     &trans  &trans  &trans  &trans  &trans
 &kp LSHFT     &trans  &kp Z  &kp X      &kp C         &kp V        &tog 7     &trans  &trans  &trans  &trans  &trans
                              &kp LCTRL  &kp LEFT_ALT  &kp SPACE    &kp SPACE  &trans  &trans
