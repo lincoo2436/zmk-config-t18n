@@ -105,10 +105,10 @@ layers:
   - '['
   - ']'
   - '&mclicklayer'
-  - '&msc MOVE_LEFT'
-  - '&msc MOVE_DOWN'
-  - '&msc MOVE_UP'
-  - '&msc MOVE_RIGHT'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
   - CAPSLOCK
   - TAB
   - F1
@@ -320,10 +320,10 @@ layers:
   - D
   - F
   - G
-  - '&msc MOVE_LEFT'
-  - '&msc MOVE_DOWN'
-  - '&msc MOVE_UP'
-  - '&msc MOVE_RIGHT'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LSHFT
